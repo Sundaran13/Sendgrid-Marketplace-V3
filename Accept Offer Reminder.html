@@ -1,0 +1,612 @@
+<html>
+
+<head>
+    <title>Activity Approval Notification</title>
+    <!--[if !mso]> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!--[endif]-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+    </style>
+    <![endif]-->
+    <style type="text/css">
+        body,
+        p,
+        div {
+            font-family: 'Open Sans', arial, sans-serif;
+            line-height: 160%;
+            font-size: 12px;
+        }
+        body {
+            color: #21233A;
+            margin: 0 !important;
+        }
+        body a:not(.footer-link) {
+            text-decoration: none !important;
+        }
+        p {
+            margin: 0 0 10px 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        b, strong {
+            font-weight: 600;
+        }
+        .header-cell.ws-logo {
+            padding: 24px 16px 16px 24px !important;
+            width: 156px !important;
+        }
+        .header-cell.ws-logo img {
+            height: 50px !important;
+        }
+        .header-cell.title {
+            font-size: 20px !important;
+            white-space: nowrap;
+        }
+        div.table-wrapper {
+            padding: 40px;
+        }
+        table.wrapper {
+            border-radius: 4px;
+            border: 1px solid #EAE8F0 !important;
+        }
+        /* table coloring */
+        table.white-cells td a {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            text-decoration: underline;
+            color: #2E3BCD;
+        }
+        .padded-l {
+            padding-left: 24px !important;
+        }
+        .padded-r {
+            padding-right: 24px !important;
+        }
+        .padded-t {
+            padding-top: 16px !important;
+        }
+        @media screen and (max-width:600px) {
+            div.table-wrapper {
+                padding: 0;
+            }
+            table.wrapper {
+                border: 0;
+            }
+            .header-cell.ws-logo {
+                padding: 8px 12px 16px 12px !important;
+                width: 100% !important;
+                text-align: center;
+            }
+            .header-cell.ws-logo img {
+                height: 24px !important;
+            }
+            .header-cell.title {
+                padding: 16px 12px 8px 12px !important;
+                border-bottom: 0 !important;
+                font-size: 16px !important;
+                text-align: center;
+            }
+            .header-cell.ws-logo {
+                padding: 16px 12px !important;
+            }
+            p {
+                font-size: 14px;
+            }
+            table[class="wrapper"] {
+                border: 0 !important;
+            }
+            .padded-l {
+                padding-left: 12px !important;
+            }
+            .padded-r {
+                padding-right: 12px !important;
+            }
+            .padded-t {
+                padding-top: 12px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center class="table-wrapper" style="padding: 40px;">
+        <table class="wrapper" border="0" cellpadding="0" cellspacing="0" style="width: 100% !important;
+              -webkit-font-smoothing: antialiased;
+              -webkit-text-size-adjust: 100%;
+              -moz-text-size-adjust: 100%;
+              -ms-text-size-adjust: 100%;
+              border: 1px solid #EAE8F0; 
+              border-radius: 4px;
+              font-family: 'Open Sans', arial, sans-serif !important;" width="100%">
+            <tbody>
+                <tr>
+                    <td valign="top" width="100%">
+                        <!--[if (gte mso 9)|(IE)]>
+                    <table align="center" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td>
+                        <![endif]-->
+                        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+                            <tbody>
+                                <tr bgcolor="FFFFFF">
+                                    <td>
+                                        <!-- Header elements layout table-->
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                            <tr>
+                                                <td class="header-wrapper">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td class="header-cell title" align="left" valign="middle" style="padding: 24px 0px 20px 24px;
+                                    border-bottom: 1px solid #EAE8F0;
+                                    font-weight: 600;
+                                    font-size: 20px;
+                                    line-height: 22px;
+                                    color: #43445F;">
+                                                                <span style="display: block;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        color: #43445F;">
+                                        {{offer_details_cloud_marketplace}} Marketplace - {{name}}</span></td>
+                                                            <td class="header-cell ws-logo padded-l" align="right" style="border-bottom: 1px solid #EAE8F0;
+                                    width: 157px;
+                                    font-size: 20px;
+                                    line-height: 22px;
+                                    color: #43445F;
+                                    padding: 24px 16px 16px 24px;">
+                                                                {{#if updated_by_company_logo}}
+                                                                <img style="height: 50px;" src="{{{updated_by_company_logo}}}" height="50" alt="{{updated_by_company_name}}"> {{else}}
+                                                                <span style="display: block;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        color: #43445F;">
+                                        {{ updated_by_company_name }}</span>{{/if}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="padded-l padded-r padded-t" colspan="2" style="padding-left: 24px; padding-right: 24px; padding-top: 16px;">
+
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: #FFF8DF;
+                                        border-radius: 4px;">
+                                                                    <tr>
+                                                                        <td style="padding: 12px;">
+                                                                            <span style="font-family: 'Open Sans', sans-serif;
+                                                font-style: normal;
+                                                font-weight: 700;
+                                                font-size: 16px;
+                                                line-height: 22px;
+                                                color: #43445F;">
+                                                Reminder to Accept your Private Offer
+                                                </span></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="padded-l padded-r padded-t padded-b" style="padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        padding-right: 24px;" valign="top">
+                                        <p style="font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 8px;
+        color: #21233A;">Dear {{#if account_details_contact_person_first_name}}<span>{{account_details_contact_person_first_name}}</span>{{else}}<span>Customer</span>{{/if}},</p>
+                                        <p style="font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #21233A;">
+                                            Your Private Offer on the {{offer_details_cloud_marketplace}} Marketplace for our {{offer_details_product_name}} has not been accepted yet. Please accept your Private Offer before {{offer_details_availability_end_date}}. </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="padded-l padded-r" style="padding-left: 24px; padding-right: 24px;">
+                                        <table class="white-cells-table-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #EAE8F0;
+            border-radius: 4px;
+            overflow: hidden;
+            max-width: 700px;">
+                                            <tr>
+                                                <td>
+                                                    <table class="white-cells" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                                                        <tr>
+                                                            <td colspan="2" style="color: #43445F;
+background: #F7F7F9;
+padding: 10px 12px;
+font-weight: 700;
+font-size: 16px;
+line-height: 22px;
+text-align: left;">
+                                                                Private Offer Details
+                                                            </td>
+                                                        </tr>
+                                                        {{#if (eq offer_details_cloud_marketplace "AWS")}}
+                                                        <tr>
+                                                            <td class="label" valign="top" style="font-weight: 400;
+        width: 174px;
+        min-width: 174px;
+        color: #636480;
+        border-right: 1px solid #EAE8F0;
+        border-bottom: 1px solid #EAE8F0;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 19px;
+        word-wrap: break-word;">
+                                                                Private Offer is created for {{offer_details_cloud_marketplace}} Account ID:
+                                                            </td>
+                                                            <td class="value" valign="top" style="max-width: 492px;
+        font-weight: 400;
+        color: #21233A;
+        border-bottom: 1px solid #EAE8F0;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 19px;
+        word-wrap: break-word;">
+                                                                {{account_details_Buyer_account_id}}
+                                                            </td>
+                                                        </tr>
+                                                        {{else}}
+                                                        <tr>
+                                                            <td colspan="2" class="label" valign="top" style="font-weight: 400;
+        width: 100%;
+        min-width: 174px;
+        color: #636480;
+        border-bottom: 1px solid #EAE8F0;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 19px;
+        word-wrap: break-word;">
+                                                                Private Offer is created for {{offer_details_cloud_marketplace}} Marketplace
+                                                            </td>
+                                                        </tr>
+                                                        {{/if}}
+
+
+                                                        <tr>
+                                                            <td class="label" valign="top" style="font-weight: 400;
+color: #636480;
+border-right: 1px solid #EAE8F0;
+border-bottom: 1px solid #EAE8F0;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;">
+                                                                Listing:
+                                                            </td>
+                                                            <td class="value" style="max-width: 492px;
+font-weight: 400;
+color: #21233A;
+border-bottom: 1px solid #EAE8F0;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;" valign="top">
+                                                                {{offer_details_product_name}}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label" style="font-weight: 400;
+color: #636480;
+border-right: 1px solid #EAE8F0;
+border-bottom: 1px solid #EAE8F0;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;" valign="top">
+                                                                Private Offer Name:
+                                                            </td>
+                                                            <td class="value" style="max-width: 492px;
+font-weight: 400;
+color: #21233A;
+padding: 8px 12px;
+border-bottom: 1px solid #EAE8F0;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;" valign="top">
+                                                                {{name}}
+                                                            </td>
+                                                        </tr>
+                                                        {{#if (eq offer_details_cloud_marketplace "AWS")}}
+                                                        <tr>
+                                                            <td class="label" style="font-weight: 400;
+        color: #636480;
+        border-right: 1px solid #EAE8F0;
+        border-bottom: 1px solid #EAE8F0;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 19px;
+        word-wrap: break-word;" valign="top">
+                                                                Private Offer Link:
+                                                            </td>
+                                                            <td class="value" style="max-width: 492px;
+        font-weight: 400;
+        color: #21233A;
+        padding: 8px 12px;
+        border-bottom: 1px solid #EAE8F0;
+        font-size: 14px;
+        line-height: 19px;
+        word-wrap: break-word;" valign="top">
+                                                                <a href="{{offer_details_offer_link}}" style="font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 19px;
+            color: #2E3BCD;">{{offer_details_offer_link}}</a>
+                                                            </td>
+                                                        </tr>
+                                                        {{else}}
+                                                        <tr>
+                                                            <td class="label" style="font-weight: 400;
+        color: #636480;
+        border-right: 1px solid #EAE8F0;
+        border-bottom: 1px solid #EAE8F0;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 19px;
+        word-wrap: break-word;" valign="top">
+                                                                Private Offer Link:
+                                                            </td>
+                                                            <td class="value" style="max-width: 492px;
+        font-weight: 400;
+        color: #21233A;
+        padding: 8px 12px;
+        border-bottom: 1px solid #EAE8F0;
+        font-size: 14px;
+        line-height: 19px;
+        word-wrap: break-word;" valign="top">
+                                                                <a href="{{offer_details_azure_offer_link}}" style="font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 19px;
+            color: #2E3BCD;">{{offer_details_azure_offer_link}}</a>
+                                                            </td>
+                                                        </tr>
+                                                        {{/if}}
+
+                                                        <tr>
+                                                            <td class="label" style="font-weight: 400;
+color: #636480;
+border-right: 1px solid #EAE8F0;
+border-bottom: 1px solid #EAE8F0;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;" valign="top">
+                                                                Last date to Accept Offer:
+                                                            </td>
+                                                            <td class="value" style="max-width: 492px;
+border-bottom: 1px solid #EAE8F0;
+font-weight: 400;
+color: #F54A3E;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;" valign="top">
+                                                                {{offer_details_availability_end_date}}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label" style="font-weight: 400;
+color: #636480;
+border-right: 1px solid #EAE8F0;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;
+border-bottom: 0;" valign="top">
+                                                                EULA type:
+                                                            </td>
+                                                            <td class="value" style="max-width: 492px;
+font-weight: 400;
+color: #F54A3E;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;
+border-bottom: 0;" valign="top">
+                                                                {{terms_and_conditions_legal_term_documents_type}}
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="padded-l padded-r padded-t padded-b" style="padding-top: 16px; padding-bottom: 16px; padding-left: 24px; padding-right: 24px;">
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px;
+              margin-bottom: 0; color: #21233A">
+                                            <strong style="font-weight: 700;color: #43445F;"> How to Accept the Offer:</strong>
+                                        </p>
+
+                                        {{#if (eq offer_details_cloud_marketplace "AWS")}}
+                                        <ol style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px;
+          margin-bottom: 24px; color: #21233A; padding-left: 20px; margin-top: 0; padding-top: 0;">
+                                            <li>Please log into the {{offer_details_cloud_marketplace}} Marketplace account: {{account_details_Buyer_account_id}}</li>
+                                            <li>Click on the following link to view your private offer:
+                                                <a href="{{offer_details_offer_link}}" style="font-family: 'Open Sans', sans-serif;
+        font-style: normal; font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">{{offer_details_offer_link}}</a>
+                                            </li>
+                                            <li>Review the Private Offer</li>
+                                            <li>For SaaS Contracts and SaaS Contracts with pay-as-you-go pricing Private Offers,</li>
+                                            <ul>
+                                                <li>Configure the contract options and click “Create contract”.</li>
+                                                <li>Review the contract and click on “Pay now”.</li>
+                                                <li>Review the contract and click on “Set up your account”.</li>
+                                                <li>For more details, visit this guide:
+                                                    <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers-subscribing-saas-private-offer.html" style="font-family: 'Open Sans', sans-serif;
+            font-style: normal; font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">AWS SaaS Private Offer Guide</a>
+                                                </li>
+                                            </ul>
+                                            <li>For SaaS pay-as-you-go pricing Private Offers,</li>
+                                            <ul>
+                                                <li>Review the pricing and click on "Subscribe".</li>
+                                                <li>Review the subscription and click on "Set up your account".</li>
+                                                <li>For more details, visit this guide:
+                                                    <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers-subscribing-saas-private-offer.html" style="font-family: 'Open Sans', sans-serif;
+            font-style: normal; font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">AWS SaaS Private Offer Guide</a>
+                                                </li>
+                                            </ul>
+                                            <li>For AMI Private Offers,</li>
+                                            <ul>
+                                                <li>Review the pricing, duration, and Terms and Conditions, and click on "Accept Terms".</li>
+                                                <li>Review the terms and click on "Confirm".</li>
+                                                <li>Click on "Continue to Configuration" and complete the process.</li>
+                                            </ul>
+                                        </ol>
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 35px; margin-bottom: 0; color: #21233A;">
+                                            <strong style="font-weight: 700; color: #43445F;">For more details, visit this guide:</strong>
+                                        </p>
+                                        <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers-subscribing-ami-private-offer.html" style="font-family: 'Open Sans', sans-serif; font-style: normal;
+font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">AWS AMI Private Offer Guide</a> {{else if (eq offer_details_cloud_marketplace "AZURE")}}
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 24px; color: #21233A;">
+
+                                        </p>
+                                        <ol style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 24px; color: #21233A; padding-left: 20px; margin-top: 0; padding-top: 0;">
+                                            <li>Click on the following link to view your private offer:
+                                                <a href="{{offer_details_offer_link}}" style="font-family: 'Open Sans', sans-serif; font-style: normal;
+        font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">{{offer_details_azure_offer_link}}</a>
+                                            </li>
+                                            <li>Review the Private Offer details</li>
+                                            <li>Agree to the Terms and Conditions by checking the “I have read the offer’s terms and conditions” and clicking on “Accept Private Offer”</li>
+                                            <li>After accepting the Private Offer, you must Purchase and Subscribe to the Offer</li>
+                                        </ol>
+
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 24px; color: #21233A;">
+                                            <strong>How to Purchase and Subscribe to the Offer:</strong>
+                                        </p>
+                                        <ol style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 24px; color: #21233A; padding-left: 20px; margin-top: 0; padding-top: 0;">
+                                            <li>Click on the following link: <a href="https://portal.azure.com" style="font-family: 'Open Sans', sans-serif; font-style: normal;
+        font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">Azure Private Offers Management portal</a>.
+                                            </li>
+                                            <li>Locate the Offer and click on “Purchase”.</li>
+                                            <li><strong>Note:</strong> The person purchasing and subscribing to the Offer needs specific permissions within the Azure Portal. Please check with your admin team to confirm who can complete this process.</li>
+                                            <li>Configure the Offer, click on “Review and Subscribe”, and then click on “Subscribe”.</li>
+                                        </ol>
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0; color: #21233A;">
+                                            For more information about accepting an Azure Marketplace Private Offer, please visit
+                                            <a href="https://learn.microsoft.com/en-us/marketplace/private-offers-in-azure-marketplace" style="font-family: 'Open Sans', sans-serif; font-style: normal;
+        font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">this guide</a>.
+                                        </p>
+                                        {{/if}}
+
+
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 16px;line-height: 35px;
+              margin-bottom: 0;color: #21233A">
+                                            <strong style="font-weight: 700;color: #43445F;"> Deadline Approaching:</strong>
+                                        </p>
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 16px;line-height: 22px;
+              margin-bottom: 24px;color: #21233A">
+                                            Please note that this private offer is only valid until {{offer_details_availability_end_date}}. After this date, the offer will no longer be available. We encourage you to accept this Private Offer before it expires.
+                                        </p>
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 16px;line-height: 22px;
+              margin-bottom: 24px;color: #21233A">
+                                            We appreciate your business and look forward to serving your business needs.
+                                        </p>
+                                        <p style="font-family: 'Open Sans', sans-serif; font-size: 16px;line-height: 22px;
+              margin-bottom: 8px;color: #21233A">
+                                            Best regards,
+                                            <br> {{updated_by_company_name}}
+                                        </p>
+                                    </td>
+                                </tr>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                      </table>
+                    <![endif]-->
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+        <tr>
+            <td align="center">
+                <table class="footer-links">
+                    <tbody>
+                        <tr>
+                            <td align="center" style="font-size: 12px; 
+                line-height: 19px;
+                padding: 24px 0 0; 
+                color: #636480;">
+                                <img src="https://drive.google.com/uc?export=view&amp;id=1lj08TnvB8kXKmCXxY7DW107W4Fui_WoP" alt="WorkSpan Logo" style="height: 20px;">
+                            </td>
+                        </tr>
+                        <table class="footer-links">
+                            <tbody>
+                                <tr>
+                                    <td align="center" style="font-size: 12px; 
+                        line-height: 19px;
+                        padding: 24px 0 4px; 
+                        color: #636480;">
+                                        <a href="https://app.workspan.com/person-profile/settings" target="_blank" style="font-weight: 700; text-decoration: none;
+                            font-size: 12px;
+                            line-height: 19px;
+                            color: #2E3BCD;">
+                            Manage Notifications
+                        </a> |
+                                        <a href="https://www.workspan.com/user-agreement/" target="_blank" style="font-weight: 700;text-decoration: none;
+                            font-size: 12px;
+                            line-height: 19px;
+                            color: #2E3BCD;">
+                            Terms of Service
+                        </a> |
+                                        <a href="https://www.workspan.com/privacy-policy/" target="_blank" style="font-weight: 700;text-decoration: none;
+                            font-size: 12px;
+                            line-height: 19px;color: #2E3BCD;">
+                            Privacy Policy
+                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <span class="copy" style="font-weight: 400;
+                            font-size: 12px;
+                            line-height: 19px;
+                            color: #636480;">
+                            © 2024 WorkSpan. All rights reserved.
+                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+    </center>
+</body>
+
+</html>
