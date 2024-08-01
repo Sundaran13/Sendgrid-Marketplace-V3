@@ -1,0 +1,380 @@
+<html>
+
+<head>
+    <title>Activity Approval Notification</title>
+    <!--[if !mso]> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!--[endif]-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+    </style>
+    <![endif]-->
+    <style type="text/css">
+        body,
+        p,
+        div {
+            font-family: 'Open Sans', arial, sans-serif;
+            line-height: 160%;
+            font-size: 12px;
+        }
+        body {
+            color: #21233A;
+            margin: 0 !important;
+        }
+        body a:not(.footer-link) {
+            text-decoration: none !important;
+        }
+        p {
+            margin: 0 0 10px 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        b, strong {
+            font-weight: 600;
+        }
+        .header-cell.ws-logo {
+            padding: 24px 16px 16px 24px !important;
+            width: 156px !important;
+        }
+        .header-cell.ws-logo img {
+            height: 50px !important;
+        }
+        .header-cell.title {
+            font-size: 20px !important;
+            white-space: nowrap;
+        }
+        div.table-wrapper {
+            padding: 40px;
+        }
+        table.wrapper {
+            border-radius: 4px;
+            border: 1px solid #EAE8F0 !important;
+        }
+        /* table coloring */
+        table.white-cells td a {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            text-decoration: underline;
+            color: #2E3BCD;
+        }
+        .padded-l {
+            padding-left: 24px !important;
+        }
+        .padded-r {
+            padding-right: 24px !important;
+        }
+        .padded-t {
+            padding-top: 16px !important;
+        }
+        @media screen and (max-width:600px) {
+            div.table-wrapper {
+                padding: 0;
+            }
+            table.wrapper {
+                border: 0;
+            }
+            .header-cell.ws-logo {
+                padding: 8px 12px 16px 12px !important;
+                width: 100% !important;
+                text-align: center;
+            }
+            .header-cell.ws-logo img {
+                height: 24px !important;
+            }
+            .header-cell.title {
+                padding: 16px 12px 8px 12px !important;
+                border-bottom: 0 !important;
+                font-size: 16px !important;
+                text-align: center;
+            }
+            .header-cell.ws-logo {
+                padding: 16px 12px !important;
+            }
+            p {
+                font-size: 14px;
+            }
+            table[class="wrapper"] {
+                border: 0 !important;
+            }
+            .padded-l {
+                padding-left: 12px !important;
+            }
+            .padded-r {
+                padding-right: 12px !important;
+            }
+            .padded-t {
+                padding-top: 12px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="table-wrapper">
+            <table class="table-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td align="center">
+                        <table class="wrapper" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: 'Open Sans', arial, sans-serif !important;">
+                            <tr>
+                                <td valign="top" width="100%">
+                                    <!-- Header elements layout table-->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                        <tr>
+                                            <td class="header-wrapper">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td class="header-cell title" align="left" valign="middle" style="padding: 24px 0px 20px 24px;
+                                    border-bottom: 1px solid #EAE8F0;
+                                    font-weight: 600;
+                                    font-size: 20px;
+                                    line-height: 22px;
+                                    color: #43445F;">
+                                                            <span style="display: block;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        color: #43445F;">
+                                        {{offer_details_cloud_marketplace}} Marketplace - {{name}}</span></td>
+                                                        <td class="header-cell ws-logo padded-l" align="right" style="border-bottom: 1px solid #EAE8F0;
+                                    width: 157px;
+                                    font-size: 20px;
+                                    line-height: 22px;
+                                    color: #43445F;
+                                    padding: 24px 16px 16px 24px;">
+                                                            {{#if updated_by_company_logo}}
+                                                            <img style="height: 50px;" src="{{{updated_by_company_logo}}}" height="50" alt="{{updated_by_company_name}}"> {{else}}
+                                                            <span style="display: block;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        color: #43445F;">
+                                        {{ updated_by_company_name }}</span>{{/if}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="padded-l padded-r padded-t" colspan="2" style="padding-left: 24px; padding-right: 24px; padding-top: 16px;">
+
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: #FFF8DF;
+                                        border-radius: 4px;">
+                                                                <tr>
+                                                                    <td style="padding: 12px;">
+                                                                        <span style="font-family: 'Open Sans', sans-serif;
+                                                font-style: normal;
+                                                font-weight: 700;
+                                                font-size: 16px;
+                                                line-height: 22px;
+                                                color: #43445F;">
+                                                Private Offer has Expired
+                                                </span></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="padded-l padded-r padded-t padded-b" style="padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        padding-right: 24px;" valign="top">
+                                    <p style="font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 8px;
+        color: #21233A;">Dear {{updated_by_company_name}},</p>
+                                    <p style="font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #21233A;">
+                                        We want to let you know that your private offer has expired. Please find the details of your private offer below:</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="padded-l padded-r" style="padding-left: 24px; padding-right: 24px;">
+                                    <table class="white-cells-table-wrapper" border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #EAE8F0;
+            border-radius: 4px;
+            overflow: hidden;
+            max-width: 700px;">
+                                        <tr>
+                                            <td>
+                                                <table class="white-cells" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                                                    <tr>
+                                                        <td colspan="2" style="color: #43445F;
+background: #F7F7F9;
+padding: 10px 12px;
+font-weight: 700;
+font-size: 16px;
+line-height: 22px;
+text-align: left;">
+                                                            Private Offer Details
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="label" valign="top" style="font-weight: 400;
+color: #636480;
+border-right: 1px solid #EAE8F0;
+border-bottom: 1px solid #EAE8F0;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;">
+                                                            Listing:
+                                                        </td>
+                                                        <td class="value" style="font-weight: 400;
+color: #21233A;
+border-bottom: 1px solid #EAE8F0;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;" valign="top">
+                                                            {{offer_details_product_name}}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="label" style="font-weight: 400;
+color: #636480;
+border-right: 1px solid #EAE8F0;
+border-bottom: 1px solid #EAE8F0;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;" valign="top">
+                                                            Private Offer Name:
+                                                        </td>
+                                                        <td class="value" style="font-weight: 400;
+color: #21233A;
+padding: 8px 12px;
+border-bottom: 1px solid #EAE8F0;
+font-size: 14px;
+line-height: 19px;
+word-wrap: break-word;" valign="top">
+                                                            {{name}}
+                                                        </td>
+                                                    </tr>
+
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+
+                            {{#if (eq offer_details_cloud_marketplace "AWS")}}
+                            <tr>
+                                <td class="padded-l padded-r padded-t padded-b" style="padding-top: 16px; padding-bottom: 16px; padding-left: 24px; padding-right: 24px;">
+                                    <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0; color: #21233A">
+                                        <strong style="font-weight: 700;color: #43445F;">Next Steps:</strong>
+                                    </p>
+                                    <ol style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; color: #21233A; padding-left: 20px; margin-top: 0; padding-top: 0;">
+                                        <li>Extend Expiration Date: If you wish to provide more time for your buyer to accept the private offer, you can easily extend the expiration date. Please click <a href="https://app.workspan.com/project/{{insert object_id}}/overview"
+                                            style="font-family: 'Open Sans', sans-serif; font-style: normal; font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">{{insert object_id}}</a> to access the extension feature.</li>
+                                        <li>Create a New Offer: Alternatively, you can create a new offer by cloning the existing one. This option allows you to customize the offer to your specific requirements. To begin, please click <a href="https://app.workspan.com/project/{{insert object_id}}/overview"
+                                            style="font-family: 'Open Sans', sans-serif; font-style: normal; font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">{{insert object_id}}</a> to clone the offer.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            {{else if (eq offer_details_cloud_marketplace "AZURE")}}
+                            <tr>
+                                <td class="padded-l padded-r padded-t padded-b" style="padding-top: 16px; padding-bottom: 16px; padding-left: 24px; padding-right: 24px;">
+                                    <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0; color: #21233A">
+                                        <strong style="font-weight: 700;color: #43445F;">Next Steps:</strong>
+                                    </p>
+                                    <ol style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; color: #21233A; padding-left: 20px; margin-top: 0; padding-top: 0;">
+                                        <li>Create a New Offer: You can create a new offer by cloning the existing one. This option allows you to customize the offer to your specific requirements. To begin, please click <a href="https://app.workspan.com/project/{{insert object_id}}/overview"
+                                            style="font-family: 'Open Sans', sans-serif; font-style: normal; font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">{{insert object_id}}</a> to clone the offer.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            {{/if}}
+
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table class="footer-links">
+                            <tbody>
+                                <tr>
+                                    <td align="center" style="font-size: 12px; 
+                line-height: 19px;
+                padding: 24px 0 0; 
+                color: #636480;">
+                                        <img src="https://drive.google.com/uc?export=view&amp;id=1lj08TnvB8kXKmCXxY7DW107W4Fui_WoP" alt="WorkSpan Logo" style="height: 20px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 12px; 
+                line-height: 19px;
+                padding: 4px 0 4px; 
+                color: #636480;" align="center">
+                                        <a href="https://app.workspan.com/person-profile/settings" target="_blank" style="font-weight: 600; text-decoration: none;
+                    font-size: 12px;
+                    line-height: 19px;
+                    color: #2E3BCD;">
+                    Manage Notifications
+                </a> |
+                                        <a href="https://www.workspan.com/user-agreement/" target="_blank" style="font-weight: 600;text-decoration: none;
+                    font-size: 12px;
+                    line-height: 19px;
+                    color: #2E3BCD;">
+                    Terms of Service
+                </a> |
+                                        <a href="https://www.workspan.com/privacy-policy/" target="_blank" style="font-weight: 600;text-decoration: none;
+                    font-size: 12px;
+                    line-height: 19px;color: #2E3BCD;">
+                    Privacy Policy
+                </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <span class="copy" style="font-weight: 400;
+                    font-size: 12px;
+                    line-height: 19px;
+                    color: #636480;">
+                    © 2023 WorkSpan. All rights reserved.
+                </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+</body>
+
+</html>
