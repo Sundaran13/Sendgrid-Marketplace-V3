@@ -291,7 +291,7 @@ word-wrap: break-word;" valign="top">
                                 </td>
                             </tr>
 
-                            {{#if (eq offer_details_cloud_marketplace "AWS")}}
+                            {{#equals offer_details_cloud_marketplace "AWS"}}
                             <tr>
                                 <td class="padded-l padded-r padded-t padded-b" style="padding-top: 16px; padding-bottom: 16px; padding-left: 24px; padding-right: 24px;">
                                     <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0; color: #21233A">
@@ -305,7 +305,8 @@ word-wrap: break-word;" valign="top">
                                     </ol>
                                 </td>
                             </tr>
-                            {{else if (eq offer_details_cloud_marketplace "AZURE")}}
+                            {{else}}
+                            {{#equals offer_details_cloud_marketplace "Azure"}}
                             <tr>
                                 <td class="padded-l padded-r padded-t padded-b" style="padding-top: 16px; padding-bottom: 16px; padding-left: 24px; padding-right: 24px;">
                                     <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0; color: #21233A">
@@ -317,7 +318,8 @@ word-wrap: break-word;" valign="top">
                                     </ol>
                                 </td>
                             </tr>
-                            {{/if}}
+                            {{/equals}}
+                            {{/equals}}
 
                         </table>
                     </td>
