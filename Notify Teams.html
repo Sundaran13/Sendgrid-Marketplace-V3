@@ -291,15 +291,17 @@
                                           font-size: 16px;
                                           line-height: 22px;
                                           color: #21233A;" valign="top">
-                                        {{#if (eq offer_details_cloud_marketplace "AWS")}}
+                                        {{#equals offer_details_cloud_marketplace "AWS"}}
                                         <p>
                                             The Private Offer {{name}} has been accepted by the buyer: {{account_details_account_name}} {{account_details_Buyer_account_id}} {{updated_by_person_name}} has sent you the following message:
                                         </p>
-                                        {{else if (eq offer_details_cloud_marketplace "AZURE")}}
+                                        {{else}}
+                                        {{#equals offer_details_cloud_marketplace "AZURE"}}
                                         <p>
                                             The Private Offer {{name}} has been accepted by the buyer: {{account_details_account_name}}. {{updated_by_person_name}} has sent you the following message:
                                         </p>
-                                        {{/if}}
+                                        {{/equals}}
+                                        {{/equals}}
                                     </td>
                                 </tr>
 
