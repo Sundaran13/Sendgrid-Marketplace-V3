@@ -252,7 +252,7 @@ text-align: left;">
                                                                 Private Offer Details
                                                             </td>
                                                         </tr>
-                                                        {{#if (eq offer_details_cloud_marketplace "AWS")}}
+                                        {{#equals offer_details_cloud_marketplace "AWS"}}
                                                         <tr>
                                                             <td class="label" valign="top" style="font-weight: 400;
         width: 174px;
@@ -277,7 +277,8 @@ text-align: left;">
                                                                 {{account_details_Buyer_account_id}}
                                                             </td>
                                                         </tr>
-                                                        {{else}}
+                                        {{else}}
+                                        {{#equals offer_details_cloud_marketplace "Azure"}}
                                                         <tr>
                                                             <td colspan="2" class="label" valign="top" style="font-weight: 400;
         width: 100%;
@@ -291,7 +292,9 @@ text-align: left;">
                                                                 Private Offer is created for {{offer_details_cloud_marketplace}} Marketplace
                                                             </td>
                                                         </tr>
-                                                        {{/if}}
+                                                        {{/equals}}
+                                                        {{/equals}}
+                        
 
 
                                                         <tr>
@@ -338,7 +341,7 @@ word-wrap: break-word;" valign="top">
                                                                 {{name}}
                                                             </td>
                                                         </tr>
-                                                        {{#if (eq offer_details_cloud_marketplace "AWS")}}
+                                        {{#equals offer_details_cloud_marketplace "AWS"}}
                                                         <tr>
                                                             <td class="label" style="font-weight: 400;
         color: #636480;
@@ -366,7 +369,8 @@ word-wrap: break-word;" valign="top">
             color: #2E3BCD;">{{offer_details_offer_link}}</a>
                                                             </td>
                                                         </tr>
-                                                        {{else}}
+                                        {{else}}
+                                        {{#equals offer_details_cloud_marketplace "Azure"}}
                                                         <tr>
                                                             <td class="label" style="font-weight: 400;
         color: #636480;
@@ -394,7 +398,8 @@ word-wrap: break-word;" valign="top">
             color: #2E3BCD;">{{offer_details_azure_offer_link}}</a>
                                                             </td>
                                                         </tr>
-                                                        {{/if}}
+                                                        {{/equals}}
+                                                        {{/equals}}
 
                                                         <tr>
                                                             <td class="label" style="font-weight: 400;
@@ -455,7 +460,7 @@ border-bottom: 0;" valign="top">
                                             <strong style="font-weight: 700;color: #43445F;"> How to Accept the Offer:</strong>
                                         </p>
 
-                                        {{#if (eq offer_details_cloud_marketplace "AWS")}}
+                                        {{#equals offer_details_cloud_marketplace "AWS"}}
                                         <ol style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px;
           margin-bottom: 24px; color: #21233A; padding-left: 20px; margin-top: 0; padding-top: 0;">
                                             <li>Please log into the {{offer_details_cloud_marketplace}} Marketplace account: {{account_details_Buyer_account_id}}</li>
@@ -494,7 +499,9 @@ border-bottom: 0;" valign="top">
                                             <strong style="font-weight: 700; color: #43445F;">For more details, visit this guide:</strong>
                                         </p>
                                         <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-private-offers-subscribing-ami-private-offer.html" style="font-family: 'Open Sans', sans-serif; font-style: normal;
-font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">AWS AMI Private Offer Guide</a> {{else if (eq offer_details_cloud_marketplace "AZURE")}}
+font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">AWS AMI Private Offer Guide</a> 
+                    {{else}}
+                    {{#equals offer_details_cloud_marketplace "Azure"}}
                                         <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 24px; color: #21233A;">
 
                                         </p>
@@ -524,7 +531,9 @@ font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">AWS AMI P
                                             <a href="https://learn.microsoft.com/en-us/marketplace/private-offers-in-azure-marketplace" style="font-family: 'Open Sans', sans-serif; font-style: normal;
         font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">this guide</a>.
                                         </p>
-                                        {{/if}}
+                                        {{/equals}}
+                                        {{/equals}}
+                            
 
 
                                         <p style="font-family: 'Open Sans', sans-serif; font-size: 16px;line-height: 35px;
