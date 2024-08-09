@@ -258,7 +258,7 @@ padding: 8px 12px;
 font-size: 14px;
 line-height: 19px;
 word-wrap: break-word;" valign="top">
-                                                            {{#equals offer_details_cloud_marketplace "AWS"}} {{offer_details_product_name}} {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}} {{offer_details_azure_listing_names}} {{/equals}} {{/equals}}
+                                                            {{#equals offer_details_cloud_marketplace "AWS"}} {{offer_details_product_name}} {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}} {{#each offer_details_azure_listing_names}} {{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/equals}} {{/equals}}
                                                         </td>
                                                     </tr>
                                                     <tr>
