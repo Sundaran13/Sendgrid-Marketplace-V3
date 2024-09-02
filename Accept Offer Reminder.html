@@ -277,7 +277,8 @@ text-align: left;">
         font-size: 14px;
         line-height: 19px;
         word-wrap: break-word;">
-                                                                {{account_details_Buyer_account_id}}
+
+                                                                {{#each account_details_Buyer_account_id}} {{this}}{{#unless @last}}, {{/unless}} {{/each}}
                                                             </td>
                                                         </tr>
                                                         {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}}
@@ -317,8 +318,8 @@ padding: 8px 12px;
 font-size: 14px;
 line-height: 19px;
 word-wrap: break-word;" valign="top">
-                                                   {{#equals offer_details_cloud_marketplace "AWS"}} {{offer_details_product_name}} {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}} {{#if offer_details_product_name}} {{offer_details_product_name}} {{else}} {{#each offer_details_azure_listing_names}}
-                                                            {{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}} {{/equals}} {{/equals}}
+                                                                {{#equals offer_details_cloud_marketplace "AWS"}} {{offer_details_product_name}} {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}} {{#if offer_details_product_name}} {{offer_details_product_name}} {{else}} {{#each offer_details_azure_listing_names}}
+                                                                {{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}} {{/equals}} {{/equals}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -463,7 +464,7 @@ border-bottom: 0;" valign="top">
                                         {{#equals offer_details_cloud_marketplace "AWS"}}
                                         <ol style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px;
           margin-bottom: 24px; color: #21233A; padding-left: 20px; margin-top: 0; padding-top: 0;">
-                                            <li>Please log into the {{offer_details_cloud_marketplace}} Marketplace account: {{account_details_Buyer_account_id}}</li>
+                                            <li>Please log into the {{offer_details_cloud_marketplace}} Marketplace account: {{#each account_details_Buyer_account_id}} {{this}}{{#unless @last}}, {{/unless}} {{/each}}</li>
                                             <li>Click on the following link to view your private offer:
                                                 <a href="{{offer_details_offer_link}}" style="font-family: 'Open Sans', sans-serif;
         font-style: normal; font-weight: 400; font-size: 15px; line-height: 19px; color: #2E3BCD;">{{offer_details_offer_link}}</a>
