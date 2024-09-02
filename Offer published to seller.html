@@ -217,16 +217,15 @@
         color: #21233A;">
                                         {{#equals offer_details_cloud_marketplace "AWS"}}
                                         <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; color: #21233A;">
-                                            Your private offer has been successfully published on the {{offer_details_cloud_marketplace}} Marketplace for {{account_details_account_name}} {{account_details_Buyer_account_id}}. Please find the details of the private offer below:
+                                            Your private offer has been successfully published on the {{offer_details_cloud_marketplace}} Marketplace for {{account_details_account_name}} {{#each account_details_Buyer_account_id}} {{this}}{{#unless @last}}, {{/unless}} {{/each}}. Please find the
+                                            details of the private offer below:
                                         </p>
-                                        {{else}}
-                                        {{#equals offer_details_cloud_marketplace "AZURE"}}
+                                        {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}}
                                         <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; color: #21233A;">
                                             Your private offer has been successfully published on the {{offer_details_cloud_marketplace}} Marketplace. Please find the details of the private offer below:
                                         </p>
-                                        {{/equals}}
-                                        {{/equals}}
-                                        </p>
+                                        {{/equals}} {{/equals}}
+                                    </p>
                                 </td>
                             </tr>
 
@@ -250,7 +249,7 @@ text-align: left;">
                                                             Private Offer Details
                                                         </td>
                                                     </tr>
-                                        {{#equals offer_details_cloud_marketplace "AWS"}}
+                                                    {{#equals offer_details_cloud_marketplace "AWS"}}
                                                     <tr>
                                                         <td class="label" valign="top" style="font-weight: 400; width: 174px; min-width: 174px; color: #636480; border-right: 1px solid #EAE8F0; border-bottom: 1px solid #EAE8F0; padding: 8px 12px; font-size: 14px; line-height: 19px; word-wrap: break-word;">
                                                             Private Offer is created by:
@@ -259,8 +258,7 @@ text-align: left;">
                                                             {{created_by_person_name}} from {{updated_by_company_name}} with Account ID: {{offer_details_seller_id}}
                                                         </td>
                                                     </tr>
-                                        {{else}}
-                                        {{#equals offer_details_cloud_marketplace "AZURE"}}
+                                                    {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}}
                                                     <tr>
                                                         <td class="label" valign="top" style="font-weight: 400; width: 174px; min-width: 174px; color: #636480; border-right: 1px solid #EAE8F0; border-bottom: 1px solid #EAE8F0; padding: 8px 12px; font-size: 14px; line-height: 19px; word-wrap: break-word;">
                                                             Private Offer is created by:
@@ -269,18 +267,16 @@ text-align: left;">
                                                             {{created_by_person_name}} from {{updated_by_company_name}}
                                                         </td>
                                                     </tr>
-                                            {{/equals}}
-                                            {{/equals}}
-                                        {{#equals offer_details_cloud_marketplace "AWS"}}
+                                                    {{/equals}} {{/equals}} {{#equals offer_details_cloud_marketplace "AWS"}}
                                                     <tr>
                                                         <td class="label" valign="top" style="font-weight: 400; width: 174px; min-width: 174px; color: #636480; border-right: 1px solid #EAE8F0; border-bottom: 1px solid #EAE8F0; padding: 8px 12px; font-size: 14px; line-height: 19px; word-wrap: break-word;">
                                                             Private Offer is created for {{offer_details_cloud_marketplace}} Account ID:
                                                         </td>
                                                         <td class="value" valign="top" style="max-width: 492px; font-weight: 400; color: #21233A; border-bottom: 1px solid #EAE8F0; padding: 8px 12px; font-size: 14px; line-height: 19px; word-wrap: break-word;">
-                                                            {{account_details_Buyer_account_id}}
+                                                            {{#each account_details_Buyer_account_id}} {{this}}{{#unless @last}}, {{/unless}} {{/each}}
                                                         </td>
                                                     </tr>
-                                            {{/equals}}
+                                                    {{/equals}}
                                                     <tr>
                                                         <td class="label" valign="top" style="font-weight: 400;
 color: #636480;
@@ -300,7 +296,7 @@ padding: 8px 12px;
 font-size: 14px;
 line-height: 19px;
 word-wrap: break-word;">
-                                                           {{#equals offer_details_cloud_marketplace "AWS"}} {{offer_details_product_name}} {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}} {{#if offer_details_product_name}} {{offer_details_product_name}} {{else}} {{#each offer_details_azure_listing_names}}
+                                                            {{#equals offer_details_cloud_marketplace "AWS"}} {{offer_details_product_name}} {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}} {{#if offer_details_product_name}} {{offer_details_product_name}} {{else}} {{#each offer_details_azure_listing_names}}
                                                             {{this}}{{#unless @last}}, {{/unless}} {{/each}} {{/if}} {{/equals}} {{/equals}}
                                                         </td>
                                                     </tr>
@@ -325,7 +321,7 @@ word-wrap: break-word;" valign="top">
                                                             {{name}}
                                                         </td>
                                                     </tr>
-                                        {{#equals offer_details_cloud_marketplace "AWS"}}
+                                                    {{#equals offer_details_cloud_marketplace "AWS"}}
                                                     <tr>
                                                         <td class="label" style="font-weight: 400; color: #636480; border-right: 1px solid #EAE8F0; border-bottom: 1px solid #EAE8F0; padding: 8px 12px; font-size: 14px; line-height: 19px; word-wrap: break-word;" valign="top">
                                                             Private Offer URL:
@@ -334,8 +330,7 @@ word-wrap: break-word;" valign="top">
                                                             <a href="{{offer_details_offer_link}}" style="color: #2E3BCD;">{{offer_details_offer_link}}</a>
                                                         </td>
                                                     </tr>
-                                    {{else}}
-                                    {{#equals offer_details_cloud_marketplace "AZURE"}}
+                                                    {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}}
                                                     <tr>
                                                         <td class="label" style="font-weight: 400; color: #636480; border-right: 1px solid #EAE8F0; border-bottom: 1px solid #EAE8F0; padding: 8px 12px; font-size: 14px; line-height: 19px; word-wrap: break-word;" valign="top">
                                                             Private Offer URL:
@@ -344,8 +339,7 @@ word-wrap: break-word;" valign="top">
                                                             <a href="{{offer_details_azure_offer_link}}" style="color: #2E3BCD;">{{offer_details_azure_offer_link}}</a>
                                                         </td>
                                                     </tr>
-                                                    {{/equals}}
-                                                    {{/equals}}
+                                                    {{/equals}} {{/equals}}
 
                                                     <tr>
                                                         <td class="label" style="font-weight: 400;
