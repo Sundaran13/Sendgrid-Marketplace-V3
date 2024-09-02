@@ -217,7 +217,7 @@
     font-size: 16px;
     line-height: 22px;
     color: #21233A;">
-                                        Your Private Offer for {{account_details_account_name}} {{account_details_Buyer_account_id}} on {{offer_details_cloud_marketplace}} Marketplace has failed to be published. Please find the details of the private offer below. Click the provided link to
+                                        Your Private Offer for {{account_details_account_name}} {{#each account_details_Buyer_account_id}} {{this}}{{#unless @last}}, {{/unless}} {{/each}} on {{offer_details_cloud_marketplace}} Marketplace has failed to be published. Please find the details of the private offer below. Click the provided link to
                                         correct any errors and publish the Private Offer again.
                                     </p>
                                     {{else}} {{#equals offer_details_cloud_marketplace "AZURE"}}
@@ -319,7 +319,7 @@ text-align: left;">
         font-size: 14px;
         line-height: 19px;
         word-wrap: break-word;">
-                                                            {{account_details_Buyer_account_id}}
+                                                            {{#each account_details_Buyer_account_id}} {{this}}{{#unless @last}}, {{/unless}} {{/each}}
                                                         </td>
                                                     </tr>
                                                     {{/equals}}
